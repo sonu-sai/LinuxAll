@@ -35,7 +35,7 @@ body {
 /* Style the header with a grey background and some padding */
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #999999;
   padding: 20px 10px;
 }
 
@@ -74,8 +74,26 @@ body {
   float: right;
 }
 
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 500px) {
+.footer {
+  background-color: #333333;
+  color: white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  columns: #000000;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 720px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+  }
+}
+/* Add media queries for responsiveness - when the screen is 540px wide or less, stack the links on top of each other */
+@media screen and (max-width: 540px) {
   .header a {
     float: none;
     display: block;
@@ -83,5 +101,10 @@ body {
   }
   .header-right {
     float: none;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 25px;
   }
 }
